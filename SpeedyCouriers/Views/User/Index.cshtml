@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    
+    if (Session["userID"] == null) {
+        Response.Redirect("~/Home/Index");
+    }
+}
+
+
+    <h2 > Index</h2 >
+
+    <a  href="@Url.Action("LogOut","Home")">Logout</a>
+
+
+    <div class="row mt-5 pt-2" >
+    <div class="col-sm-3" >
+
+    <h4 > Full Name</h4 >
+    </div >
+    <div class="col-sm-9" >
+    <h4 > @Session["Name"].ToString() </h4 >
+    </div >
+    </div >
+    <div class="row" >
+    <div class="col-sm-3" >
+    <h4 > Role</h4 >
+    </div >
+    <div class="col-sm-9" >
+        <h4> @Session["UserRole"].ToString() </h4>
+    </div >
+    </div >
+    <div class="row" >
+    <div class="col-sm-3" >
+    <h4 > Email</h4 >
+    </div >
+    <div class="col-sm-9" >
+        <h4> @Session["Email"].ToString() </h4>
+    </div >
+    </div >
+
+
+
+    <div class="row" >
+    <div class="col-sm-3" >
+    <a class="btn btn-info" style="margin-bottom: 10px" target="" href="" > Edit</a >
+    </div >
+    </div >
+
+
+    <div class="d-grid gap-2" >
+    <a href="CreateParcel" class="btn btn-lg btn-primary" type="button" > Create Parcel</a >
+    <a href="OrderDetails" class="btn btn-lg btn-primary" type="button" > Order Details</a >
+    </div >

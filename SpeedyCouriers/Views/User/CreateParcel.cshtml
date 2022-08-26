@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "CreateParcel";
+}
+
+<h2>CreateParcel</h2>
+
+<head>
+    <style>
+        h3 {
+            background: red;
+            color: white;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=datetime-local] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+
+<body class="mt-5">
+
+
+    <form action="/receiverInfo/CreateParcel" method="post">
+
+        <h3> Reciever Information</h3>
+
+        <label for="sname">Reciever Name</label>
+        <div>
+            <input type="text" id="rname" name="receiverName">
+           
+        </div>
+        <label for="rphone"> Phone</label>
+        <div>
+            <input type="text" id="rphone" name="phoneNumber">
+        </div>
+        <label for="raddress"> Address</label>
+        <div>
+            <input type="text" id="raddress" name="receiverAddress">
+        </div>
+
+        <h3> Delivery Information</h3>
+
+        <label for="pcategory">Product Category</label>
+        <div>
+            <select id="category" name="productType">
+                <option style="display:none"></option>
+                <option value="cloth">Cloth</option>
+                <option value="edevice">Electronic Device</option>
+                <option value="furniture">Furniture</option>
+                <option value="shoe">Shoe</option>
+                <option value="book">Book</option>
+            </select>
+        </div>
+
+        <label for="pdate">Pickup Date</label>
+        <div >
+            <input type="date" id="receiveDate">
+        </div>
+        <label for="pcash">Cash</label>
+        <div>
+            <input type="text" id="pcash" name="productPrice">
+        </div>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+
